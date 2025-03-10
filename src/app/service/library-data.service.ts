@@ -1,6 +1,5 @@
 import {Injectable, signal, WritableSignal} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {tap} from 'rxjs';
 import {Library} from '../components/model/libriaryModel';
 
 @Injectable({
@@ -13,7 +12,7 @@ export class LibraryDataService {
   }
 
   getLibraries(q:string ='') {
-    this.http.get(`https://apidata.mos.ru/demo/v1/datasets/526/rows${q}`).pipe(tap(res=>console.log(res)))
+    this.http.get(`https://apidata.mos.ru/demo/v1/datasets/526/rows${q}`)
       .subscribe(res=> this.libraries.set(res as Library[]) )
   }
 }

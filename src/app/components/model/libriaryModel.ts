@@ -107,6 +107,7 @@ export interface Library{
   Cells:Cells;
 }
 export interface LibraryInfo{
+  globalId: string;
   id: string;
   name: string;
   address: string;

@@ -1,1 +1,17 @@
-
+<div [routerLink]="''" class="back"><mat-icon>arrow_left</mat-icon> <p>вернутся</p> </div>
+<table>
+  <thead>
+  <tr>
+    <th>Поле</th>
+    <th>Значение</th>
+  </tr>
+  </thead>
+  <tbody>
+    @for (pair of libraries(); track pair[0]) {
+      <tr>
+        <td>{{ pair[0] }}</td>
+        <td>{{ pair[1] }}</td>
+      </tr>
+    }
+  </tbody>
+</table>
